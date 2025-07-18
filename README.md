@@ -1,39 +1,44 @@
-Estudo de Arquitetura de Computadores: MIPS e VLIW
+# Estudo de Arquitetura de Computadores: MIPS e VLIW
+
 Este repositório documenta meu estudo prático e implementação de diferentes arquiteturas de processadores, começando com as variações do MIPS e evoluindo para um processador VLIW. O objetivo é aplicar os conceitos teóricos de arquitetura e organização de computadores em projetos funcionais.
 
-🎯 Objetivos do Projeto
+
+
+---
+
+## 🎯 Objetivos do Projeto
+
 O roteiro deste projeto consiste na implementação das seguintes arquiteturas, com cada uma sendo desenvolvida em duas plataformas para fins de comparação e aprendizado:
 
-1. MIPS Monociclo:
+- **[ ] 1. MIPS Monociclo:**
+  - `[ ]` Implementação em Logisim Evolution
+  - `[ ]` Implementação em Verilog HDL
 
-[ ] Implementação em Logisim Evolution
+- **[ ] 2. MIPS Multiciclo:**
+  - `[ ]` Implementação em Logisim Evolution
+  - `[ ]` Implementação em Verilog HDL
 
-[ ] Implementação em Verilog HDL
+- **[ ] 3. MIPS com Pipeline:**
+  - `[ ]` Implementação em Logisim Evolution
+  - `[ ]` Implementação em Verilog HDL
 
-2. MIPS Multiciclo:
+- **[ ] 4. Processador VLIW (Very Long Instruction Word):**
+  - `[ ]` Concepção e implementação da arquitetura final.
 
-[ ] Implementação em Logisim Evolution
+---
 
-[ ] Implementação em Verilog HDL
+## 🛠️ Ferramentas e Tecnologias
 
-3. MIPS com Pipeline:
+- **Logisim Evolution:** Utilizado para o design visual, simulação e depuração dos circuitos lógicos de forma gráfica.
+- **Verilog HDL:** Uma linguagem de descrição de hardware (HDL) usada para modelar os sistemas eletrônicos e processadores em um nível mais próximo do hardware real.
 
-[ ] Implementação em Logisim Evolution
+---
 
-[ ] Implementação em Verilog HDL
+## 📂 Estrutura do Repositório
 
-4. Processador VLIW (Very Long Instruction Word):
-
-[ ] Concepção e implementação da arquitetura final.
-
-🛠️ Ferramentas e Tecnologias
-Logisim Evolution: Utilizado para o design visual, simulação e depuração dos circuitos lógicos de forma gráfica.
-
-Verilog HDL: Uma linguagem de descrição de hardware (HDL) usada para modelar os sistemas eletrônicos e processadores em um nível mais próximo do hardware real.
-
-📂 Estrutura do Repositório
 Para manter a organização, cada arquitetura terá seu próprio diretório, contendo subpastas para as respectivas implementações em Logisim e Verilog.
 
+```
 /
 ├── MIPS_Monociclo/
 │   ├── logisim/
@@ -52,7 +57,11 @@ Para manter a organização, cada arquitetura terá seu próprio diretório, con
 └── VLIW/
     ├── docs/
     └── src/
-🚀 Como Utilizar
-Projetos em Logisim: Para visualizar e simular os circuitos, abra os arquivos com extensão .circ na versão mais recente do Logisim Evolution.
+```
 
-Projetos em Verilog: Os arquivos .v podem ser compilados e simulados utilizando ferramentas padrão da indústria, como ModelSim, Icarus Verilog, ou Vivado.
+---
+
+## 🚀 Como Utilizar
+
+- **Projetos em Logisim:** Para visualizar e simular os circuitos, abra os arquivos com extensão `.circ` na versão mais recente do [Logisim Evolution](https://github.com/logisim-evolution/logisim-evolution).
+- **Projetos em Verilog:** Os arquivos `.v` podem ser compilados e simulados utilizando ferramentas padrão da indústria, como ModelSim, Icarus Verilog, ou Vivado.
