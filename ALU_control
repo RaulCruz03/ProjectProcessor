@@ -1,0 +1,42 @@
+module alu_control (
+    input  logic [1:0] ALUOp_in,    // Comando da UC Principal
+    input  logic [5:0] funct_in,    // Campo 'funct' da instrução
+    output logic [3:0] ALUSelection // Saída final de 4 bits para a ULA
+);
+
+
+    always_comb begin
+        case (ALUOp_in)
+            // SOMA (para ld/st)
+            2'b00: begin
+                ALUSelection = 4'b0000; // add
+            end
+
+            // SUB beq
+            2'b01: begin
+                ALUSelection = 4'b0001; // sub
+            end
+
+            2'b10: begin
+                case (funct_in)
+                    6'b000000: ALUSelection = 4'b0000; // add
+                    6'b000001: ALUSelection = 4'b0001; // sub
+                    6'b000010: ALUSelection = 4'b0010; // mult
+                    6'b000011: ALUSelection = 4'b0011; // div
+                    6'b000100: ALUSelection = 4'b0100; // slt
+                    6'b000101: ALUSelection = 4'b0101; // and
+                    6'b000110: ALUSelection = 4'b0110; // or
+                    6'b000111: ALUSelection = 4'b0111; // xor
+                    6'b001000: ALUSelection = 4'b1000; // not
+                    6'b001001: ALUSelection = 4'b1001; // sll
+                    6'b001010: ALUSelection = 4'b1010; // srl
+                    default: ALUSelection = 4'bxxxx;
+                endcase
+            end
+
+            // Caso o ALUOp seja um valor inesperado (ex: 2'b11)
+            default: ALUSelection = 4'bxxxx;
+        endcase
+    end
+
+endmodule
